@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrade | Connect with the World</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">Upgrade</div>
+      <div class="nav-links" id="nav-links">
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div id="auth-view" class="view">
+      <div class="auth-split">
+        <div class="auth-left">
+          <div class="auth-card glass-panel">
+            <h2 id="auth-title">Welcome Back</h2>
+            <p class="subtitle" id="auth-subtitle">Login to continue to your network</p>
+            <form id="auth-form">
+              <div class="input-group" id="name-group" style="display: none;">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="E.g., John Doe">
+              </div>
+              <div class="input-group" id="bio-group" style="display: none;">
+                <label for="bio">Title / Bio</label>
+                <input type="text" id="bio" placeholder="E.g., Fullstack Developer">
+              </div>
+              <div class="input-group" id="email-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="john@gmail.com" required>
+              </div>
+              <div class="input-group" id="username-group" style="display: none;">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="john_doe">
+              </div>
+              <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+              </div>
+              <button type="submit" class="btn primary-btn full-width" id="auth-submit">Login</button>
+            </form>
+            <div class="auth-switch">
+              <span id="auth-switch-text">Don't have an account? </span>
+              <button type="button" class="btn-link" id="auth-switch-btn">Sign up</button>
+            </div>
+          </div>
+        </div>
+        <div class="auth-right hidden-mobile">
+          <div class="hero-content">
+            <h1 class="hero-title">Experience the New Wave of Social Connection</h1>
+            <p class="hero-subtitle">Engage, share, and grow with a community that values meaningful interactions.</p>
+            <div class="hero-graphics">
+              <div class="floating-bubble bubble-1"></div>
+              <div class="floating-bubble bubble-2"></div>
+              <div class="floating-bubble bubble-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="admin-view" class="view hidden">
+      <div class="glass-panel" style="margin-top: 40px;">
+        <h2 style="margin-bottom: 20px; color: var(--danger);">Admin Dashboard</h2>
+        <p class="text-muted" style="margin-bottom: 20px;">Manage and remove user accounts below.</p>
+        <div id="admin-users-list" style="display: flex; flex-direction: column; gap: 15px;">
+        </div>
+      </div>
+    </div>
+
+    <div id="feed-view" class="view hidden">
+      <div class="feed-layout">
+        <aside class="sidebar left-sidebar hidden-mobile">
+          <div class="profile-summary glass-panel" id="mini-profile">
+          </div>
+        </aside>
+        <div class="main-feed">
+          <div class="create-post-card glass-panel">
+            <form id="create-post-form">
+              <textarea id="post-content" placeholder="What's happening?" required></textarea>
+              <div class="post-actions">
+                <button type="submit" class="btn primary-btn">Post</button>
+              </div>
+            </form>
+          </div>
+          <div id="posts-container">
+          </div>
+        </div>
+        <aside class="sidebar right-sidebar hidden-mobile">
+          <div class="trending-panel glass-panel" id="explore-users-panel">
+            <h3>Who to Follow</h3>
+            <div id="suggested-users-container" style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <div id="profile-view" class="view hidden">
+      <div class="profile-header glass-panel">
+        <div class="profile-info" id="profile-info">
+        </div>
+      </div>
+      <div class="profile-posts" id="profile-posts-container">
+      </div>
+    </div>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
